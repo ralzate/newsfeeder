@@ -1,0 +1,2 @@
+1.) Make sure to hide publicly displayed Facebook authentication keys
+in ~/config/omniauth.rb.
