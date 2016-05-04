@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160504220445) do
+ActiveRecord::Schema.define(version: 20160504235633) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -35,16 +35,24 @@ ActiveRecord::Schema.define(version: 20160504220445) do
     t.datetime "updated_at", null: false
     t.integer  "likes"
     t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
   end
 
   add_index "stories", ["user_id"], name: "index_stories_on_user_id"
 
   create_table "users", force: :cascade do |t|
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.string   "name",                       default: "", null: false
+    t.integer  "user_id",          limit: 8, default: 0,  null: false
+    t.integer  "uid",              limit: 8
     t.string   "provider"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.text     "avatar_url"
   end
+
+  add_index "users", ["uid"], name: "index_users_on_uid"
 
 end

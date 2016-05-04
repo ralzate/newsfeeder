@@ -3673,3 +3673,1656 @@ ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid
 
 
 Started POST "/__web_console/repl_sessions/63c3e26b787ce576d7ae3c7cb34ff10a/trace" for ::1 at 2016-05-04 18:33:35 -0400
+
+
+Started GET "/" for ::1 at 2016-05-04 18:56:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.7ms)
+Completed 200 OK in 419ms (Views: 384.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 18:56:19 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.1ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (0.7ms)
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (1.1ms)
+Completed 200 OK in 58ms (Views: 56.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:56:22 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:56:23 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBadMRb2GobteYXpQA5Ru1z8_SNP94q8FxeRQdHijnYo1sOWKK_L2nuaeLMXptZgJo48nS3PiticWYE2C9Gyh2UN2mJ59qPHLqfKPw1xuzjPRaQyAQOW188rd5a6gckqIJW3reAX5jarATqYQ0TJA7BKk0yJa231-eJjPlu3MuZJl-eoqijIolq4b5PPERAlXqSeK2Tm5sY_NwophvxgGp4UdjAcsiG7OqinlVrns7EJnDQssQ9SdN5V9DM-wFlP9BN6byHk5Cy0ZmSXPOAq8XYqyrdHq8sSBbCp7ArnH858Hk_CKVSpWzaBsDYHW8Ca2B4KWIeOpv7GSHEw0ePktSD&state=8e3ca6451b007224e4962be87f2821dd9af6f57473255e58" for ::1 at 2016-05-04 18:56:23 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBadMRb2GobteYXpQA5Ru1z8_SNP94q8FxeRQdHijnYo1sOWKK_L2nuaeLMXptZgJo48nS3PiticWYE2C9Gyh2UN2mJ59qPHLqfKPw1xuzjPRaQyAQOW188rd5a6gckqIJW3reAX5jarATqYQ0TJA7BKk0yJa231-eJjPlu3MuZJl-eoqijIolq4b5PPERAlXqSeK2Tm5sY_NwophvxgGp4UdjAcsiG7OqinlVrns7EJnDQssQ9SdN5V9DM-wFlP9BN6byHk5Cy0ZmSXPOAq8XYqyrdHq8sSBbCp7ArnH858Hk_CKVSpWzaBsDYHW8Ca2B4KWIeOpv7GSHEw0ePktSD", "state"=>"8e3ca6451b007224e4962be87f2821dd9af6f57473255e58", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `user' for #<Class:0x007fbe6ca16648>):
+  app/models/user.rb:6:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (58.2ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504225925)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "uid" varchar[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504225925)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "uid" integer[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504225925)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "uid" uid[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504225925)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mALTER TABLE "users" ADD "uid" uid[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504225925"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:01:43 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:01:44 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCn9ySmKG5AbVtajH7CZ34X0iPSrHAiPdI8utUMEYMuH15ZC5m-Mut0IEyzlBvvYsNCd48obI6_Xun82UmhDF8WWlmyRwhsDEvlwfp-LIVOwfh6f8VrGAcT3tQqEKn8bjEhAFDupcYXi18HFttQuEtgb-rCtpdXhwb_AfDx2A5lecBLUYEz2w8Kp7-ClDtf8j0HWJrxjQYoQiNDHDdhHS4JW3KgukIOGpMQ88gDGMoebQ6vubNRnYeaVcFdxv32pxZpsj0P4KqH6d71mTKyEIp7DPxWqBjibnt9kO7dnMMoaIiiws7uFMlDO2eLw_6qQrHhJg9ZfVQwlTG3ub-hOloB&state=64be4bc81954d3efc53683e888da1e86638c7ebb28731a7f" for ::1 at 2016-05-04 19:01:44 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCn9ySmKG5AbVtajH7CZ34X0iPSrHAiPdI8utUMEYMuH15ZC5m-Mut0IEyzlBvvYsNCd48obI6_Xun82UmhDF8WWlmyRwhsDEvlwfp-LIVOwfh6f8VrGAcT3tQqEKn8bjEhAFDupcYXi18HFttQuEtgb-rCtpdXhwb_AfDx2A5lecBLUYEz2w8Kp7-ClDtf8j0HWJrxjQYoQiNDHDdhHS4JW3KgukIOGpMQ88gDGMoebQ6vubNRnYeaVcFdxv32pxZpsj0P4KqH6d71mTKyEIp7DPxWqBjibnt9kO7dnMMoaIiiws7uFMlDO2eLw_6qQrHhJg9ZfVQwlTG3ub-hOloB", "state"=>"64be4bc81954d3efc53683e888da1e86638c7ebb28731a7f", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `user' for #<Class:0x007fa2fa5c3150>):
+  app/models/user.rb:6:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (78.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (54.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.4ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:02:10 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:02:10 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQASeyZ10w3nHUGsJcNeQixU1IQ83ScUNwuhJX1GH2uGmE1MBDrxx0Gpan41bYoxFXkiRFKp4ux9FMr2XdSk3uTCNLSMjQ0J_DAD_ITNXFtwR8I7COQJoHTnTZJ75w7dtS-SNFTGqp0zEUbMsoqV3L17mpWhHP28d_FrIKYai6I0XCHqNSe44H-l1fA31Z3dUtnW5TsX2qpqnfAt_xh8gymiFJ6tIgydVLKbFhY0tDZLEYKlvNeDknugHx_wMJJQA0S_qR3oQouR8ykU6GsIuLRvf3sPenAoFPdmSPaumfHHD8ROoEUiF5fHCSwHqN1RDv8tm19-w21HkGbX2tLN1qrS&state=49a98da5b997c0444c2da0412cafbfae3430f39ed4d67d75" for ::1 at 2016-05-04 19:02:10 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQASeyZ10w3nHUGsJcNeQixU1IQ83ScUNwuhJX1GH2uGmE1MBDrxx0Gpan41bYoxFXkiRFKp4ux9FMr2XdSk3uTCNLSMjQ0J_DAD_ITNXFtwR8I7COQJoHTnTZJ75w7dtS-SNFTGqp0zEUbMsoqV3L17mpWhHP28d_FrIKYai6I0XCHqNSe44H-l1fA31Z3dUtnW5TsX2qpqnfAt_xh8gymiFJ6tIgydVLKbFhY0tDZLEYKlvNeDknugHx_wMJJQA0S_qR3oQouR8ykU6GsIuLRvf3sPenAoFPdmSPaumfHHD8ROoEUiF5fHCSwHqN1RDv8tm19-w21HkGbX2tLN1qrS", "state"=>"49a98da5b997c0444c2da0412cafbfae3430f39ed4d67d75", "provider"=>"facebook"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", "1165675636776308"]]
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.9ms)
+
+NoMethodError (undefined method `name=' for #<User:0x007fa2fa23ff10>):
+  app/models/user.rb:7:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (37.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.3ms)
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:20 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:22 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:24 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:25 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:28 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:33 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:02:50 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:03:00 -0400
+
+
+Started POST "/__web_console/repl_sessions/db85eb78c8b2e5cdbcf7ece096f6fb9c/trace" for ::1 at 2016-05-04 19:03:59 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddUidToUsers (20160504225925)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to AddUidToUsers (20160504225925)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.6ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUserTable (20160504230716)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "provider" varchar, "user_id" integer) [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (1.7ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:9)
+  [1m[35m (0.5ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.2ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_user_id_on_integer" ON "user_id" ("integer")[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.4ms)[0m  [1mCREATE  INDEX "index_id_on_integer" ON "id" ("integer")[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504231602)
+  [1m[35m (0.2ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504231602_create_users.rb:8)
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.2ms)[0m  [1mCREATE  INDEX "index_users_on_user_id" ON "users" ("user_id")[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504231602"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-05-04 19:26:23 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.9ms)
+  [1m[36mPublicActivity::Activity Load (0.9ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.8ms)
+Completed 200 OK in 395ms (Views: 358.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:26:25 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:26:30 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:26:31 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBl7opOeboddXghQFWBB6MlgNxbC2ooSPceAkZ3VPs_-sEoQ5QNtwJVhIyn2kVYEyLSFgJnsTZLc2u1-GynMgKA8Snv8BVbqiTExbmoSOORgq68ucioETrzNokDrxKYNjKTvTs7pzbkEXgReJmLA28YS9BECmJBe3qivIcZ1g3_McN9FdCLQdfzO-ecXXHaKhc9lPMMXQbFa9FQqLjxPzGO6mvqRm-EJb6ObCQHonahNS_VxlfcU37tWlge8M1vg8GJWJ5vFx-ILk_62lp-t30ZQ_xEKw7410k1YAEsSG_jG2pkutoQC2gVB8nIQNmU316iIKyR_K5QpxoVHwAc9mpz&state=bf3c1a19accec91320bcdcc60015a99b1abb2f7cae359bea" for ::1 at 2016-05-04 19:26:31 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBl7opOeboddXghQFWBB6MlgNxbC2ooSPceAkZ3VPs_-sEoQ5QNtwJVhIyn2kVYEyLSFgJnsTZLc2u1-GynMgKA8Snv8BVbqiTExbmoSOORgq68ucioETrzNokDrxKYNjKTvTs7pzbkEXgReJmLA28YS9BECmJBe3qivIcZ1g3_McN9FdCLQdfzO-ecXXHaKhc9lPMMXQbFa9FQqLjxPzGO6mvqRm-EJb6ObCQHonahNS_VxlfcU37tWlge8M1vg8GJWJ5vFx-ILk_62lp-t30ZQ_xEKw7410k1YAEsSG_jG2pkutoQC2gVB8nIQNmU316iIKyR_K5QpxoVHwAc9mpz", "state"=>"bf3c1a19accec91320bcdcc60015a99b1abb2f7cae359bea", "provider"=>"facebook"}
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 1.1ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1):
+  app/models/user.rb:6:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504232704)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "uid" integer[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504232704"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.3ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-05-04 19:28:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (3.4ms)
+  [1m[36mPublicActivity::Activity Load (3.4ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (7.7ms)
+Completed 200 OK in 482ms (Views: 440.6ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:28:13 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:28:16 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:28:16 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCnMC05gK_ajvVFEmKv3NIjS_-sLy3jgVAk6Qmp9mx411zD5fNWXz7tKVk7fO4dWlWy_Yl_608UByxFbcKqSAFldq9NZJt5HH7uY4qBvSL65LhFG34Zbtxjp1xFfePx1GvicgP-l4GjUU3FAzB3806k7_UoIR1Tr9vJFOcwSiMJ_LzXw44mZPs57lmOnb-__7tpDuwuTUzkncU-JBFy5FaWF3btw3KGpkApYEijeXP-yeKBDSzYd3reeaonEf9T6brLlG9nbflv7YszgHuIFJjVmkSt7a4csI9YPSLHYT6Rq-1prNBycbthxMGJ8FRToWcImktsCWuxmMQ9jyXLC-2s&state=a9c42add92a716857fc61bd606300aa99d3e92b0fd17be15" for ::1 at 2016-05-04 19:28:16 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCnMC05gK_ajvVFEmKv3NIjS_-sLy3jgVAk6Qmp9mx411zD5fNWXz7tKVk7fO4dWlWy_Yl_608UByxFbcKqSAFldq9NZJt5HH7uY4qBvSL65LhFG34Zbtxjp1xFfePx1GvicgP-l4GjUU3FAzB3806k7_UoIR1Tr9vJFOcwSiMJ_LzXw44mZPs57lmOnb-__7tpDuwuTUzkncU-JBFy5FaWF3btw3KGpkApYEijeXP-yeKBDSzYd3reeaonEf9T6brLlG9nbflv7YszgHuIFJjVmkSt7a4csI9YPSLHYT6Rq-1prNBycbthxMGJ8FRToWcImktsCWuxmMQ9jyXLC-2s", "state"=>"a9c42add92a716857fc61bd606300aa99d3e92b0fd17be15", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 35ms (ActiveRecord: 0.4ms)
+
+NoMethodError (undefined method `avatar_url=' for #<User:0x007fa4a2093050>):
+  app/models/user.rb:10:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (62.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (51.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddAvatarUrlImageToUsers (20160504232934)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "avatar_url" url[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504232934"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-05-04 19:30:29 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mPublicActivity::Activity Load (0.5ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.6ms)
+Completed 200 OK in 411ms (Views: 374.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:30:31 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:30:33 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:30:34 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCWfncmerZ8jK-yQhz7pAOBpgdXkwg6NneOrBMSoCdH9beyKXc0789zvIOuYUpzNbV6ANK43OIzUUK0QH4_lr_lBjQh4WYgTfDkkeOdH5Z4a_Noty68MhFmPZUdSGwsCW0hDVkX2XXcrobJpPqH6kGUO6V5IKbUCTBU0fKTIQvGlQ-ciTxWhDrzUjRHNZN_5No3m27GSqm_hBkWiBFt7017vdLP9_aonC4mcdU97uZnrumt1tIgXRP6nsscKFUVPzU8BZ9-Gz0_mntbHfai_gdDfgLdi0S14UI7g4S8iVEs4lNYIiaXX6qXIITmjzaw2AsOLswmTwUoVTFGqRJNJ8MJ&state=40796d9cbdd57e0499cbfd4de3199034d0e78f08aa00f5a3" for ::1 at 2016-05-04 19:30:34 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCWfncmerZ8jK-yQhz7pAOBpgdXkwg6NneOrBMSoCdH9beyKXc0789zvIOuYUpzNbV6ANK43OIzUUK0QH4_lr_lBjQh4WYgTfDkkeOdH5Z4a_Noty68MhFmPZUdSGwsCW0hDVkX2XXcrobJpPqH6kGUO6V5IKbUCTBU0fKTIQvGlQ-ciTxWhDrzUjRHNZN_5No3m27GSqm_hBkWiBFt7017vdLP9_aonC4mcdU97uZnrumt1tIgXRP6nsscKFUVPzU8BZ9-Gz0_mntbHfai_gdDfgLdi0S14UI7g4S8iVEs4lNYIiaXX6qXIITmjzaw2AsOLswmTwUoVTFGqRJNJ8MJ", "state"=>"40796d9cbdd57e0499cbfd4de3199034d0e78f08aa00f5a3", "provider"=>"facebook"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.5ms)
+
+RangeError (1165675636776308 is out of range for ActiveRecord::Type::Integer with limit 4):
+  app/models/user.rb:11:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (72.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (55.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.9ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504233240_create_users.rb:8)
+  [1m[36m (0.0ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504233240_create_users.rb:8)
+  [1m[36m (0.7ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer(8) DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime, "avatar_url" text) [0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (0.1ms)[0m  begin transaction
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504233240_create_users.rb:9)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer(8) DEFAULT 0 NOT NULL, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime, "avatar_url" text) [0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504233240)
+  [1m[35m (1.8ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504233240_create_users.rb:10)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer(8) DEFAULT 0 NOT NULL, "provider" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime, "avatar_url" text) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_user_id" ON "users" ("user_id")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504233240"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_user_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-05-04 19:42:21 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (3.0ms)
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (4.1ms)
+Completed 200 OK in 436ms (Views: 399.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:42:22 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:42:22 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:42:22 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:42:22 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:42:23 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:42:26 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:42:26 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAxXrJK7MuNljMlhzI3kvWIhNNcA8RR0eu_UcV1FNsC--EJAWPYrj3c7tp_YmtDdJR3caWFA9I5HUc06UwQSX39G_WBsclhGUnztRqnMa_QBrQdS_VkXkk_4pqMdQtYd_DI4DFi_aEFznstfSIOr_VWtVmfJQ_AKLgau4McQTs7A8x0roh8KWHnuUaimjvBg8PDGziwPQetTde15jpy1kDCBV5atd8PO0Oz_eDytp4MgPyIho1ddOukKdANogsVFJku7_2k4dyYebSZGXdNxJ_lR90WbnZVHM5P2w9MkcWdU8Yl-3ueZGgMTBxwY1ZD4-TDK0Bv2Wc2HOQPqmCWzy_t&state=f67a89002c45f56893780f7643564ed5d3d59bf3203e37f6" for ::1 at 2016-05-04 19:42:26 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAxXrJK7MuNljMlhzI3kvWIhNNcA8RR0eu_UcV1FNsC--EJAWPYrj3c7tp_YmtDdJR3caWFA9I5HUc06UwQSX39G_WBsclhGUnztRqnMa_QBrQdS_VkXkk_4pqMdQtYd_DI4DFi_aEFznstfSIOr_VWtVmfJQ_AKLgau4McQTs7A8x0roh8KWHnuUaimjvBg8PDGziwPQetTde15jpy1kDCBV5atd8PO0Oz_eDytp4MgPyIho1ddOukKdANogsVFJku7_2k4dyYebSZGXdNxJ_lR90WbnZVHM5P2w9MkcWdU8Yl-3ueZGgMTBxwY1ZD4-TDK0Bv2Wc2HOQPqmCWzy_t", "state"=>"f67a89002c45f56893780f7643564ed5d3d59bf3203e37f6", "provider"=>"facebook"}
+  [1m[35mUser Load (5.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 5.8ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1):
+  app/models/user.rb:6:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (67.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.4ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddUidToUsers (20160504234320)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "uid" integer(8)[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504234320"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_user_id' AND type='index'
+[0m
+
+
+Started GET "/" for ::1 at 2016-05-04 19:44:01 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.6ms)
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.6ms)
+Completed 200 OK in 458ms (Views: 423.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:44:02 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:44:03 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:44:04 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQC_mh9OLHsVYBBsvFBVw70_OPkoYj_NqiuH5CKfhbCZxdApD5UuA6tK1wv5Ay8_-enKHv1NFOX3noFJB821sl5UFa6x6rQWU5zxNBlUQDDyPyspVCb7pJtapqIe0YeV_uB7CAH7o91fXhPghRLWShDMq5j75ojpR8KLj0yrZ9iyDN1jQeBbZb7ggC6JEq1lyaX3tA1hr3cczTZp_PDgBYMUg3rZpAS2-RCt_HAr57ZmVKW3ym-JoD7fhhzQoDExKt-gMUZbSaO5UhyBUre7vPGgziIv8OdLSvUmR7jIUVA8y_xJAB6mwe-8uyKekocuMkn4t1LvWpDw8rd1wX825d6p&state=b5f745a2aa8d13ee33b1e40ec44a7776be2986d1a16b7664" for ::1 at 2016-05-04 19:44:04 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC_mh9OLHsVYBBsvFBVw70_OPkoYj_NqiuH5CKfhbCZxdApD5UuA6tK1wv5Ay8_-enKHv1NFOX3noFJB821sl5UFa6x6rQWU5zxNBlUQDDyPyspVCb7pJtapqIe0YeV_uB7CAH7o91fXhPghRLWShDMq5j75ojpR8KLj0yrZ9iyDN1jQeBbZb7ggC6JEq1lyaX3tA1hr3cczTZp_PDgBYMUg3rZpAS2-RCt_HAr57ZmVKW3ym-JoD7fhhzQoDExKt-gMUZbSaO5UhyBUre7vPGgziIv8OdLSvUmR7jIUVA8y_xJAB6mwe-8uyKekocuMkn4t1LvWpDw8rd1wX825d6p", "state"=>"b5f745a2aa8d13ee33b1e40ec44a7776be2986d1a16b7664", "provider"=>"facebook"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1  [["uid", 1165675636776308]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.2ms)[0m  INSERT INTO "users" ("uid", "name", "oauth_token", "oauth_expires_at", "avatar_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["uid", 1165675636776308], ["name", "Tom Kueny"], ["oauth_token", "EAAIBQwjlVL0BADCTAZCH8OXwPD2roZBdAJJRf4cVJR8FClISRUftWqoph8wiAC3dXIwC7e6csyPMdAiHZADM6kcf9LoZAE1sRfXMRzsC4UydspSaoRi8w3bOIVDVEZBEmdwByLdIsPRXX8X0dIKUdZC2zjcmsFcF8ZD"], ["oauth_expires_at", "2016-07-03 22:32:36.000000"], ["avatar_url", "http://graph.facebook.com/1165675636776308/picture"], ["created_at", "2016-05-04 23:44:05.347394"], ["updated_at", "2016-05-04 23:44:05.347394"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 24ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:44:05 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (1.1ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  Rendered shared/_activities.html.erb (0.6ms)
+Completed 200 OK in 44ms (Views: 42.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:44:18 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered stories/_form.html.erb (30.5ms)
+  Rendered stories/new.html.erb within layouts/application (33.3ms)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f888051ea90>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112097911560'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (76.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (98.9ms)
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:44:18 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.3ms)
+  Rendered stories/_form.html.erb (9.0ms)
+  Rendered stories/new.html.erb within layouts/application (10.3ms)
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f888291e710>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112141436460'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (58.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (95.2ms)
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:31 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:33 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:37 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:44 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:48 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:44:51 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:45:53 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:45:58 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:45:59 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:46:01 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:47:59 -0400
+
+
+Started POST "/__web_console/repl_sessions/25cc95f0342230b90590362e6a6d51e1/trace" for ::1 at 2016-05-04 19:48:05 -0400
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:49:19 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered stories/_form.html.erb (15.6ms)
+  Rendered stories/new.html.erb within layouts/application (17.9ms)
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.7ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f8880479400>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112097911560'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (63.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (40.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (89.8ms)
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:49:19 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered stories/_form.html.erb (6.9ms)
+  Rendered stories/new.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f887fd6dad0>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112141436460'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.1ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.7ms)
+
+
+Started POST "/__web_console/repl_sessions/92a6857b6ad96d820ed946830409e203/trace" for ::1 at 2016-05-04 19:49:26 -0400
+
+
+Started GET "/" for ::1 at 2016-05-04 19:50:25 -0400
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.5ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  Rendered stories/index.html.erb within layouts/application (1.8ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.4ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.8ms)
+Completed 200 OK in 55ms (Views: 48.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:50:26 -0400
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:50:28 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered stories/_form.html.erb (9.2ms)
+  Rendered stories/new.html.erb within layouts/application (10.8ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f888054feb0>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112122630840'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112097911560'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (88.2ms)
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:50:29 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.0ms)
+  Rendered stories/_form.html.erb (6.7ms)
+  Rendered stories/new.html.erb within layouts/application (7.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `title' for #<Story:0x007f887d542a60>):
+    3: 
+    4:     <div class="form-group">
+    5:         <%=f.label :title%>
+    6:         <%=f.text_field :title, class: 'form-control', required: true%>
+    7:     </div>
+    8: 
+    9:     <div class="form-group">
+  app/views/stories/_form.html.erb:6:in `block in _app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/_form.html.erb:1:in `_app_views_stories__form_html_erb___1777825433538501996_70112141408200'
+  app/views/stories/new.html.erb:2:in `_app_views_stories_new_html_erb__2418118763671082194_70112141436460'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.7ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (69.2ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (83.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20160504235403)
+  [1m[35m (2.4ms)[0m  DROP TABLE "users"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+DEPRECATION WARNING: `#timestamps` was called without specifying an option for `null`. In Rails 5, this behavior will change to `null: false`. You should manually specify `null: true` to prevent the behavior of your existing migrations from changing. (called from block in change at /Users/tk1210/Documents/Projects/app_dev/newsfeeder/db/migrate/20160504235403_create_users.rb:11)
+  [1m[35m (0.6ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar DEFAULT '' NOT NULL, "user_id" integer(8) DEFAULT 0 NOT NULL, "uid" integer(8), "provider" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "created_at" datetime, "updated_at" datetime, "avatar_url" text) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_users_on_uid" ON "users" ("uid")
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504235403"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+
+  [1m[36m (0.3ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddTitleToStories (20160504235633)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "stories" ADD "title" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "stories" ADD "body" text
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160504235633"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+
+  [1m[36m (0.4ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_users_on_uid' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_users_on_uid' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-05-04 19:57:34 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.5ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  Rendered shared/_activities.html.erb (1.4ms)
+Completed 200 OK in 437ms (Views: 402.2ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 19:57:35 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:57:37 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:57:37 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQD1M4chL4t7N7vdWgawwJCGMF4kkV-Fq9nt7rxyBXNNCzoM0rnvryROyDenlAHKEmsPcqYGWKPuWV_sRKDConOhJ0SFmdey-j359GB3DiRbUzl74J2ZxnTjxANRI7JFimMxvFhgZR6UKm_yt-In9KbB7AhpqqyDwDLiR14iwzp3F6-ZFslGjonajJAFtKV0pCgWS8LnNEe6A-g3bmBqnhG4My8_jeWumaeLfu7RCH3ALVcRhgqB3YgqdibuMmWVLFaUvEkSxv4tfbJKGYKpF99_DdAA9oc2ysbwj9DC7dTKuokTNB-2Bn5yLhoaIIj17myvjSabUEbZgw3w4ZJ5e7-D&state=c52ab94191d2b1394e15ab17faaaa61dc4052220a3ecde8b" for ::1 at 2016-05-04 19:57:37 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQD1M4chL4t7N7vdWgawwJCGMF4kkV-Fq9nt7rxyBXNNCzoM0rnvryROyDenlAHKEmsPcqYGWKPuWV_sRKDConOhJ0SFmdey-j359GB3DiRbUzl74J2ZxnTjxANRI7JFimMxvFhgZR6UKm_yt-In9KbB7AhpqqyDwDLiR14iwzp3F6-ZFslGjonajJAFtKV0pCgWS8LnNEe6A-g3bmBqnhG4My8_jeWumaeLfu7RCH3ALVcRhgqB3YgqdibuMmWVLFaUvEkSxv4tfbJKGYKpF99_DdAA9oc2ysbwj9DC7dTKuokTNB-2Bn5yLhoaIIj17myvjSabUEbZgw3w4ZJ5e7-D", "state"=>"c52ab94191d2b1394e15ab17faaaa61dc4052220a3ecde8b", "provider"=>"facebook"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", 1165675636776308]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "users" ("uid", "name", "oauth_token", "oauth_expires_at", "avatar_url", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["uid", 1165675636776308], ["name", "Tom Kueny"], ["oauth_token", "EAAIBQwjlVL0BAE9suHOyIyZAxCZAE1tZAq9wZAn90bXoevxOaZANdsrYO5ViaSE4QK5aqfJ5es8S3um6sJNYyvSdcsSqQ7LaXkzKbBNkPQEkJZCNgskXaXEwZAqtZBvj6vPjifplGSOrLIA8Tm4qwiSpAvJDTWbSZCbsZD"], ["oauth_expires_at", "2016-07-03 22:32:36.000000"], ["avatar_url", "http://graph.facebook.com/1165675636776308/picture"], ["created_at", "2016-05-04 23:57:38.806584"], ["updated_at", "2016-05-04 23:57:38.806584"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 16ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:57:38 -0400
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.3ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  Rendered stories/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.5ms)
+Completed 200 OK in 57ms (Views: 55.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 19:57:41 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.5ms)
+  Rendered stories/_form.html.erb (28.6ms)
+  Rendered stories/new.html.erb within layouts/application (30.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (1.0ms)
+Completed 200 OK in 65ms (Views: 60.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/stories" for ::1 at 2016-05-04 19:58:02 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uCUohq3dcouaIy/RjQGCs0lPJzN6ArMemCoMq+Ip5tr+zT2rkBLkhc905ewutOnVBMN6rNPoUpOt1n82rLjXBw==", "story"=>{"title"=>"This is a test!!", "body"=>"This is my first post...\r\nHello, world!"}, "commit"=>"Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "stories" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "This is a test!!"], ["body", "This is my first post...\r\nHello, world!"], ["created_at", "2016-05-04 23:58:02.344893"], ["updated_at", "2016-05-04 23:58:02.344893"]]
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "activities" ("key", "owner_id", "owner_type", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "story.create"], ["owner_id", 1], ["owner_type", "User"], ["trackable_id", 1], ["trackable_type", "Story"], ["created_at", "2016-05-04 23:58:02.389295"], ["updated_at", "2016-05-04 23:58:02.389295"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 50ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:58:02 -0400
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  Rendered stories/index.html.erb within layouts/application (1.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (5.8ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stories/1" for ::1 at 2016-05-04 19:58:07 -0400
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered stories/show.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (3.4ms)
+Completed 200 OK in 34ms (Views: 32.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/stories/1/like" for ::1 at 2016-05-04 19:58:09 -0400
+Processing by StoriesController#like as HTML
+  Parameters: {"authenticity_token"=>"KhhxRYGa3gsZXbKjKu2wIAx3qDCxOp/SKtviffShf2hs8GRovFVIBUwKeJ6JWNtGQfv1rxjQfl8fJ5HgujBOtQ==", "id"=>"1"}
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "stories" SET "likes" = ?, "updated_at" = ? WHERE "stories"."id" = ?[0m  [["likes", 1], ["updated_at", "2016-05-04 23:58:09.305035"], ["id", 1]]
+  [1m[35m (2.2ms)[0m  commit transaction
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "activities" ("key", "owner_id", "owner_type", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "story.like"], ["owner_id", 1], ["owner_type", "User"], ["trackable_id", 1], ["trackable_type", "Story"], ["created_at", "2016-05-04 23:58:09.313985"], ["updated_at", "2016-05-04 23:58:09.313985"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/stories/1
+Completed 302 Found in 14ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/stories/1" for ::1 at 2016-05-04 19:58:09 -0400
+Processing by StoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered stories/show.html.erb within layouts/application (0.9ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (3.9ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:58:13 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (3.9ms)
+Completed 200 OK in 42ms (Views: 40.7ms | ActiveRecord: 0.7ms)
+
+
+Started DELETE "/logout" for ::1 at 2016-05-04 19:58:20 -0400
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3uo9HXOnfwpNrQX1KUkb6CDxqSS8jUd/5iWQ/k5f0oOYAigwTmjpBBj6z8iK/HCObX30uxVnpvLT2eNjAM7jXg=="}
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:58:20 -0400
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  Rendered stories/index.html.erb within layouts/application (0.9ms)
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (4.0ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:58:26 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 19:58:26 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAJYTB9ibkV0VpzKvMll30oZEk9Y-pZdv5QY6cLDfed5gxgYBZFtHbdP9QjkTBMgd2NXN7VeJ9gC4bDcElumoVKVcoWeBjOqkQxRkkvsioDStUKhtZkAQ5vXguHwFWpnUaE_pTjfk93EsWTyQZVzcB2nae15n5uBY-DJHbbobWWLSLA5E2MneA_qunB3oi2EMHBV02dPyU-_apP1l29wqmOGUhlHtegqLgf_VamiMDf_KnXsZLVkI1agkIDpQOSrKjO8kmSUgt1NwA73TFMJsFaXmn6kUYo-eGLDIZT6mbpObZ8Kl_FV3BTHvjE-xheb8XMo0Rwwtuensr9Ol1N4HQi&state=8e25cebe62a8c31bd7fbbc6b519d53e0c8ba6c9c27e1becd" for ::1 at 2016-05-04 19:58:27 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAJYTB9ibkV0VpzKvMll30oZEk9Y-pZdv5QY6cLDfed5gxgYBZFtHbdP9QjkTBMgd2NXN7VeJ9gC4bDcElumoVKVcoWeBjOqkQxRkkvsioDStUKhtZkAQ5vXguHwFWpnUaE_pTjfk93EsWTyQZVzcB2nae15n5uBY-DJHbbobWWLSLA5E2MneA_qunB3oi2EMHBV02dPyU-_apP1l29wqmOGUhlHtegqLgf_VamiMDf_KnXsZLVkI1agkIDpQOSrKjO8kmSUgt1NwA73TFMJsFaXmn6kUYo-eGLDIZT6mbpObZ8Kl_FV3BTHvjE-xheb8XMo0Rwwtuensr9Ol1N4HQi", "state"=>"8e25cebe62a8c31bd7fbbc6b519d53e0c8ba6c9c27e1becd", "provider"=>"facebook"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."uid" = ? LIMIT 1[0m  [["uid", 1165675636776308]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "oauth_token" = ?, "updated_at" = ? WHERE "users"."id" = ?[0m  [["oauth_token", "EAAIBQwjlVL0BAPAGcBIGOMd1bxKV9MLdbcUA71zKba1sILrqWcrYGjqCgcjxSeZBLZAnifuzvRbR29RpY4ujS53JYc7Bz77XIYA6JXEZAVIBDQpB3378YRn0wTGeEaPDPSxRsO9ZCJySKfDubXXwej6f5ZBebxMMZD"], ["updated_at", "2016-05-04 23:58:27.867165"], ["id", 1]]
+  [1m[35m (1.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/
+Completed 302 Found in 5ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 19:58:27 -0400
+Processing by StoriesController#index as HTML
+  [1m[36mStory Load (0.2ms)[0m  [1mSELECT "stories".* FROM "stories"  ORDER BY created_at DESC[0m
+  Rendered stories/index.html.erb within layouts/application (1.7ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPublicActivity::Activity Load (0.3ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mStory Load (0.1ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered shared/_activities.html.erb (5.5ms)
+Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.8ms)

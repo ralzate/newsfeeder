@@ -1,10 +1,11 @@
 class Story < ActiveRecord::Base
 
-  include PublicActivity::Model
-  tracked owner: Proc.new { |controller, model| controller.current_user ? controller.current_user : nil },
-          title: proc { |controller, model| model.title}
-  belongs_to :user
+    belongs_to :user
 
-  validates :title, presence: true
-  validates :body, presence: true
+    validates :title, presence: true
+    validates :body, presence: true
+
+    include PublicActivity::Model
+    tracked owner: Proc.new { |controller, model| controller.current_user ? controller.current_user : nil }
+
 end
