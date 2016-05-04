@@ -3190,3 +3190,486 @@ Started GET "/auth/facebook" for ::1 at 2016-05-04 17:08:29 -0400
 
 Started GET "/auth/facebook" for ::1 at 2016-05-04 17:08:29 -0400
 (facebook) Request phase initiated.
+  [1m[36m (0.4ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddOauthTokens (20160504220445)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.8ms)[0m  [1mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "oauth_token" varchar
+  [1m[36m (0.1ms)[0m  [1mALTER TABLE "users" ADD "oauth_expires_at" datetime[0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.3ms)[0m  [1mCREATE  INDEX "index_users_on_timestamps" ON "users" ("timestamps")[0m
+  [1m[35m (0.5ms)[0m  rollback transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddOauthTokens (20160504220445)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mALTER TABLE "users" ADD "provider" varchar[0m
+  [1m[35m (0.2ms)[0m  ALTER TABLE "users" ADD "oauth_token" varchar
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "users" ADD "oauth_expires_at" datetime[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160504220445"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_recipient_id_and_recipient_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_owner_id_and_owner_type' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_activities_on_trackable_id_and_trackable_type' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_stories_on_user_id' AND type='index'
+
+
+
+Started GET "/" for ::1 at 2016-05-04 18:19:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (3.5ms)
+  [1m[36mPublicActivity::Activity Load (0.5ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.7ms)
+Completed 200 OK in 974ms (Views: 934.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/facebook.self-09ee8ed4ea00124a9eefcfcd438251703311e3e0b35d38b834e7e3ba9979be2c.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:14 -0400
+
+
+Started GET "/" for ::1 at 2016-05-04 18:19:23 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (1.0ms)
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.7ms)
+Completed 200 OK in 31ms (Views: 30.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/facebook.self-09ee8ed4ea00124a9eefcfcd438251703311e3e0b35d38b834e7e3ba9979be2c.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:19:24 -0400
+
+
+Started GET "/" for ::1 at 2016-05-04 18:21:26 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (1.2ms)
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.7ms)
+Completed 200 OK in 418ms (Views: 416.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:21:27 -0400
+
+
+Started GET "/assets/facebook.self-d5dc2db1a84feda2004ca55c40f567418cae5ae76e60ba197b33dc14733d056a.js?body=1" for ::1 at 2016-05-04 18:21:27 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:21:27 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:21:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:21:28 -0400
+
+
+Started GET "/" for ::1 at 2016-05-04 18:22:34 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (0.7ms)
+  [1m[36mPublicActivity::Activity Load (0.5ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (1.2ms)
+Completed 200 OK in 389ms (Views: 387.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:22:35 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:22:38 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:22:38 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/" for ::1 at 2016-05-04 18:23:27 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.2ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (0.9ms)
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 54.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:23:27 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:23:29 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:23:29 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/" for ::1 at 2016-05-04 18:23:48 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.1ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (0.8ms)
+  [1m[36mPublicActivity::Activity Load (0.2ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (0.5ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:23:49 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:23:52 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:23:52 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/" for ::1 at 2016-05-04 18:26:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.7ms)
+  [1m[36mPublicActivity::Activity Load (0.7ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (3.3ms)
+Completed 200 OK in 467ms (Views: 432.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:26:10 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:26:12 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:26:12 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/" for ::1 at 2016-05-04 18:32:28 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.4ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.8ms)
+  [1m[36mPublicActivity::Activity Load (0.6ms)[0m  [1mSELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20[0m
+  Rendered shared/_activities.html.erb (4.7ms)
+Completed 200 OK in 401ms (Views: 366.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 18:32:29 -0400
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:32:30 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for ::1 at 2016-05-04 18:32:31 -0400
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBeqZaY_BsjD2-eWrlr7ZLvVkn0BjTP9B_zxvpHYoTLZE2LANq-Ar9X9V10_85srzb7Xd6l6mSRdzj-5f0WktgrSeCW57zl9C92MEtC6_idnzZOSvX1D-8kDNgZF9X28EtrMQN0peFvMWRfyLWsqwIPCq_dQiem8HKf3HPr14T_wVNXBWRBPMANIgjRAVadDuN-UbyjLL5n_n0y-XsayAdHcjEIOShyam91d6FGrqItp2pYiMx9UrH6ff8C08HU7iEVuUYdKuV6po3H7UHcl_ttkt0fkwCfn0nKQGpTkHrqHQvKDAbm228NX_gxBb2ZNFjLu3Y3rQOoe8-uz-24z_Ly&state=02fc00d95e8b3e1f7d60428485e8aa9aadf3a38f95bee1cc" for ::1 at 2016-05-04 18:32:36 -0400
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBeqZaY_BsjD2-eWrlr7ZLvVkn0BjTP9B_zxvpHYoTLZE2LANq-Ar9X9V10_85srzb7Xd6l6mSRdzj-5f0WktgrSeCW57zl9C92MEtC6_idnzZOSvX1D-8kDNgZF9X28EtrMQN0peFvMWRfyLWsqwIPCq_dQiem8HKf3HPr14T_wVNXBWRBPMANIgjRAVadDuN-UbyjLL5n_n0y-XsayAdHcjEIOShyam91d6FGrqItp2pYiMx9UrH6ff8C08HU7iEVuUYdKuV6po3H7UHcl_ttkt0fkwCfn0nKQGpTkHrqHQvKDAbm228NX_gxBb2ZNFjLu3Y3rQOoe8-uz-24z_Ly", "state"=>"02fc00d95e8b3e1f7d60428485e8aa9aadf3a38f95bee1cc", "provider"=>"facebook"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::StatementInvalid (SQLite3::SQLException: no such column: users.uid: SELECT  "users".* FROM "users" WHERE "users"."uid" = '1165675636776308' LIMIT 1):
+  app/models/user.rb:6:in `from_omniauth'
+  app/controllers/sessions_controller.rb:4:in `create'
+
+
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0@global/gems/actionpack-4.2.5.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (60.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.9ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/tk1210/.rvm/gems/ruby-2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.1ms)
+
+
+Started POST "/__web_console/repl_sessions/63c3e26b787ce576d7ae3c7cb34ff10a/trace" for ::1 at 2016-05-04 18:33:35 -0400

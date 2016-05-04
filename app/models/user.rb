@@ -5,6 +5,8 @@ class User < ActiveRecord::Base
         def from_omniauth(auth)
             user = User.find_or_initialize_by(uid: auth['uid'])
             user.name = auth['info']['name']
+            user.oauth_token = auth.credentials.token
+            user.oauth_expires_at = Time.at(auth.credentials.expires_at)
             user.avatar_url = auth['info']['image']
             user.save!
             user
