@@ -5326,3 +5326,106 @@ Processing by StoriesController#index as HTML
   [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1[0m  [["id", 1]]
   Rendered shared/_activities.html.erb (5.5ms)
 Completed 200 OK in 47ms (Views: 45.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 20:37:49 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.8ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (9.3ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.3ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (9.3ms)
+Completed 200 OK in 109ms (Views: 101.4ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/shared.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/jquery.self-660adc51e0224b731d29f575a6f1ec167ba08ad06ed5deca4f1e8654c135bf4c.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/jquery_ujs.self-e87806d0cf4489aeb1bb7288016024e8de67fd18db693fe026fe3907581e53cd.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/stories.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/application.self-efba76b79d5a64043ceac21285dcab19531af0622e43c88260cf38b1bc2340e7.css?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/facebook.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/shared.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/stories.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular-fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c.woff2" for ::1 at 2016-05-04 20:37:50 -0400
+
+
+Started GET "/stories/new" for ::1 at 2016-05-04 20:37:54 -0400
+Processing by StoriesController#new as HTML
+  Rendered shared/_errors.html.erb (0.1ms)
+  Rendered stories/_form.html.erb (4.8ms)
+  Rendered stories/new.html.erb within layouts/application (7.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (4.3ms)
+Completed 200 OK in 45ms (Views: 44.1ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/stories" for ::1 at 2016-05-04 20:38:06 -0400
+Processing by StoriesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2a12sGMsyqeoSczV73wCheeuzcAaIO9fhoix/8LhoEyfRWOdXuNcqf0eBuhMyWnjqiKQX7PKDtKzdMJijHCRkQ==", "story"=>{"title"=>"Test2", "body"=>"testing..."}, "commit"=>"Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "stories" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Test2"], ["body", "testing..."], ["created_at", "2016-05-05 00:38:06.640776"], ["updated_at", "2016-05-05 00:38:06.640776"]]
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "activities" ("key", "owner_id", "owner_type", "trackable_id", "trackable_type", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["key", "story.create"], ["owner_id", 1], ["owner_type", "User"], ["trackable_id", 2], ["trackable_type", "Story"], ["created_at", "2016-05-05 00:38:06.648978"], ["updated_at", "2016-05-05 00:38:06.648978"]]
+  [1m[36m (1.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 17ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2016-05-04 20:38:06 -0400
+Processing by StoriesController#index as HTML
+  [1m[35mStory Load (0.3ms)[0m  SELECT "stories".* FROM "stories"  ORDER BY created_at DESC
+  Rendered stories/index.html.erb within layouts/application (2.3ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPublicActivity::Activity Load (0.2ms)[0m  SELECT  "activities".* FROM "activities"  ORDER BY created_at DESC LIMIT 20
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.1ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mStory Load (0.2ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered text template (0.0ms)
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "stories".* FROM "stories" WHERE "stories"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered shared/_activities.html.erb (8.4ms)
+Completed 200 OK in 61ms (Views: 58.7ms | ActiveRecord: 1.0ms)
